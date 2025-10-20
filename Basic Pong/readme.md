@@ -1,5 +1,10 @@
-This is a super basic pong game
+# Pong
+A basic ping pong game made using the pygame module
 
-It is made with pygame. It simply lets 2 people play against each other on the same computer at the same time.
+### Prequisites
+pygame is the only module needed to be installed to run this program
 
-The game goes on until 1 person gets to 5 points and then there is an exit screen that stays up for a couple of seconds, before the whole program ends...
+### How to run the script
+in your terminal navigate to the game's directory and type in python3 or python main.py
+
+## *Vibhu Kartik*
