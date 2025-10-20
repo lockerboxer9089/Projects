@@ -1,3 +1,0 @@
-([('main',
-   '/Users/vibhu/Documents/Programming/Python/Hangman/dist/main',
-   'EXECUTABLE')],)
