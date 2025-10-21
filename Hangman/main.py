@@ -123,10 +123,10 @@ while running:
             continue
 
     elif state == 'main' and (pygame.time.get_ticks() - current_time) >= 750:
-        screen.fill(BLACK)
+        screen.fill(WHITE)
 
         display_word = ' '.join(word)
-        word_to_guess = word_font.render(display_word, True, WHITE)
+        word_to_guess = word_font.render(display_word, True, BLACK)
         screen.blit(word_to_guess, (WIDTH//2 - word_to_guess.get_width()//2, HEIGHT//2-250))
 
         hangman_images = [img0, img1, img2, img3, img4, img5, img6]
