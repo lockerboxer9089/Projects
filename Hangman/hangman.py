@@ -1,9 +1,3 @@
-"""
-Improvements:
-1. Make the program end if the word is guessed correctly
-2. Make the program display the word in the game over screen
-"""
-
 import pygame, random 
 
 pygame.init()
@@ -14,7 +8,7 @@ BG_COLOR = (238, 240, 204)
 WHITE = (255,255,255)
 BLACK = (0,0,0)
 
-with open('hangman_words.txt', 'r') as f:
+with open('/Users/vibhu/Documents/GitHub/Projects/Hangman/hangman_words.txt', 'r') as f:
     words = f.readlines()
 
 words = [word.strip() for word in words]
@@ -26,15 +20,15 @@ title_font = pygame.font.SysFont("Apple Chancery", 80)
 word_font = pygame.font.SysFont("Bradley Hand", 50)
 
 # Images
-start_btn_image = pygame.image.load("5360348.png").convert_alpha()
-end_btn_image = pygame.image.load("image-removebg-preview.png").convert_alpha()
-img0 = pygame.image.load("0.jpg").convert()
-img1 = pygame.image.load("1.jpg").convert()
-img2 = pygame.image.load("2.jpg").convert()
-img3 = pygame.image.load("3.jpg").convert()
-img4 = pygame.image.load("4.jpg").convert()
-img5 = pygame.image.load("5.jpg").convert()
-img6 = pygame.image.load("6.jpg").convert()
+start_btn_image = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/5360348.png").convert_alpha()
+end_btn_image = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/image-removebg-preview.png").convert_alpha()
+img0 = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/0.jpg").convert()
+img1 = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/1.jpg").convert()
+img2 = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/2.jpg").convert()
+img3 = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/3.jpg").convert()
+img4 = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/4.jpg").convert()
+img5 = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/5.jpg").convert()
+img6 = pygame.image.load("/Users/vibhu/Documents/GitHub/Projects/Hangman/6.jpg").convert()
 
 random_word = random.choice(words).lower()
 word = '_' * len(random_word)
