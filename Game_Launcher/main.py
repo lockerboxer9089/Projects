@@ -1,4 +1,5 @@
 import pygame
+import pygame_widgets as pw
 
 pygame.init()
 
