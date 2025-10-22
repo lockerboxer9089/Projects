@@ -1,5 +1,22 @@
 import pygame
-import pygame_widgets as pw
+
+class Button:
+    def __init__(self, x, y, width, height, text, color, hover_color, action):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.text = text
+        self.color = color
+        self.hover_color = hover_color
+        self.action = action
+        self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
+
+    def draw_button(self):
+        mouse_pos = pygame.mouse.get_pos()
+
+        if self.rect.colliderect(mouse_pos):
+            print("Colission")
 
 pygame.init()
 
@@ -12,6 +29,8 @@ clock = pygame.time.Clock()
 # Images
 hangman_logo = pygame.image.load("hangman_logo.jpg").convert()
 pong_logo = pygame.image.load("pong_logo.jpg").convert()
+
+submit = Button(120, 240, 60, 60, "hi", "blue", "blue", True)
 
 # Rects
 hangman_rect = hangman_logo.get_rect()
