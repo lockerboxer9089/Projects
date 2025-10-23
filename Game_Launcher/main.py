@@ -3,41 +3,19 @@ import pygame
 pygame.init()
 
 class Button:
-    def __init__(self, x, y, width, height, text, function=None, onePress=False):
+    def __init__(self, x, y, text, enabled):
         self.x = x
         self.y = y
-        self.width = width
-        self.height = height
         self.text = text
-        self.function = function
-        self.onePress = onePress
-        self.alreadyPressed = False
-        self.fillColors = {
-            'normal': '#ffffff',
-            'hover': '#666666',
-            'pressed': '#333333'
-        }
-        self.buttonSurface = pygame.Surface((self.width, self.height))
-        self.buttonRect = pygame.Rect(self.x, self.y, self.width, self.height)
-        self.buttonSurf = font.render(text, True, (20,20,20))
-        objects.append(self)
+        self.enabled = enabled
+        self.draw()
 
-    def process(self):
-        mouse_pos = pygame.mouse.get_pos()
-        self.buttonSurface.fill(self.fillColors['normal'])
-        if self.buttonRect.collidepoint(mouse_pos):
-            self.buttonSurface.fill(self.fillColors['hover'])
-            if pygame.mouse.get_pressed(num_buttons=3)[0]:
-                self.buttonSurface.fill(self.fillColors['pressed'])
-                if self.onePress:
-                    self.function()
-                elif not self.alreadyPressed:
-                    self.function()
-                    self.alreadyPressed = True
-            else:
-                self.alreadyPressed = True
-        
-        self.buttonSurface.blit(self.buttonSurf, [])
+    def draw(self):
+        button_text = font.render(self.text, True, 'black')
+        button_rect = pygame.rect.Rect((self.x, self.y), (150,25))
+        pygame.draw.rect(screen, 'gray', button_rect, 0, 5)
+        pygame.draw.rect(screen, 'black', button_rect, 2, 5)
+        screen.blit(button_text, (self.x+3, self.y+3))
 
 WIDTH,HEIGHT = 600,600
 objects = []
@@ -67,6 +45,7 @@ while running:
 
     # Displaying Elements
     screen.blit(hangman_logo, hangman_rect)
+    button = Button('Click me!', 10, 10, True)
 
     # Updating Display
     pygame.display.flip()
