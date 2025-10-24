@@ -1,64 +1,63 @@
-body {
-    background-color: black;
-}
-
-#title {
-    color: white;
+.title {
     text-align: center;
-    font-size: 50px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-#break {
-    height: 5px;
-    background-color: white;
-    border-radius: 5px;
-}
-
-h1,h3 {
-    color: white;
-}
-
-#info {
-    font-size: 35px;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.images {
-    border-radius: 30px;
-    width: 280px;
-    height: 280px;
-}
-
-#hangmanImage {
-    left: 175px;
-    bottom: 110px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 40px;
-    margin-left: -50%;
-}
-
-.buttons {
-    display: inline-block;
-    padding: 15px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
-    cursor: pointer;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: rgb(61, 61, 195);
-    border-radius: 30px;
-    border: none;
-    box-shadow: 0 9px #ffffff;
+    background-color: rgb(203, 203, 203);
+    height: 120px;
+    margin-top: -30px;
+    align-items: center;
+    line-height: 120px;
+    border-radius: 5px;
+    color: rgb(52, 52, 53);
+}   
+
+#titlebreak {
+    height: 10px;
+    background-color: rgb(203, 203, 203);
+    border: 0;
+    border-radius: 10px;
 }
 
-.buttons:active {
-    box-shadow: 0 5px #ffffff;
-    transform: translateY(4px);
+.top {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.topbuttons {
+    background-color: transparent;
+    position: relative;
+    color: black;
+    border: 2px solid gainsboro;
+    margin-top: 25px;
+    left: 40.5%;
+    height: 75px;
+    width: 75px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.topbuttons::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(180, 180, 180);
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.topbuttons:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.topbuttons:hover::after {
+    width: 100%;
 }
