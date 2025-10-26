@@ -20,19 +20,3 @@ function returnToMain() {
 function review() {
     location.replace("redirect_pages/review.html");
 }
-
-function submitForm(event) {
-    event.preventDefault();
-
-    var fName = document.getElementById("fname");
-    var lName = document.getElementById("lname");
-    let answer = prompt("Do you wish to\n1. Go back to the homepage or \n2. Close this window? Enter the number of your choice");
-    if (answer == 1) {
-        alert("redirecting to home page!");
-        window.location.href = "../index.html";
-    }
-    else {
-        alert("closing window...");
-        close();
-    }
-}
