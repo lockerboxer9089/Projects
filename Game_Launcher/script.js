@@ -21,7 +21,7 @@ function review() {
     location.replace("redirect_pages/review.html");
 }
 
-function submit() {
+function submitReview() {
     var fname = document.getElementById("fname").value;
     var lname = document.getElementById("lname").value;
     var email = document.getElementById("email").value;
@@ -46,5 +46,5 @@ function submit() {
         improvements: improvements
     }));
 
-    location.replace("final.html");
+    window.location.href = "final.html";
 }
