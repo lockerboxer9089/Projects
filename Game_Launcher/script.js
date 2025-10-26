@@ -8,8 +8,15 @@ function redirect(page) {
     else if (page == 3) {
         location.replace("game_pages/hangman.html");
     }
+    else if (page == 4) {
+        location.replace("game_pages/pong.html");
+    }
 }
 
 function returnToMain() {
     location.replace("../index.html");
+}
+
+function review() {
+    location.replace("redirect_pages/review.html");
 }

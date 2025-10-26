@@ -15,16 +15,24 @@
     <div class="top">
         <button class="topbuttons" onclick="redirect(1)">Home</button>
         <button class="topbuttons" onclick="redirect(2)">Log Out</button>
-        <button class="topbuttons" onclick="dropdown()">Settings</button>
+        <button class="topbuttons" onclick="review()">Review</button>
     </div>
     <br>
     <hr id="titlebreak">
-    <div class="hangman">
-        <h1>Hangman</h1>
-        <img src="hangman_logo.jpg" alt="Hangman Image" id="hangmanImage">
-        <h3>A simple hangman game made in python. It uses the pygame module. Click the button below to run it!</h3>
-        <button onclick="redirect(3)" class="runButtons">Run</button>
-        <h1></h1>
+    <div id="games">
+        <div class="games">
+            <h1>Hangman</h1>
+            <img src="hangman_logo.jpg" alt="Hangman Image" id="hangmanImage">
+            <h3 class="info">A simple hangman game made in python. It uses the pygame module. Click the button below to view it!</h3>
+            <button onclick="redirect(3)" class="runButtons">View</button>
+            <h1></h1>
+        </div>
+        <div class="games" id="pong">
+            <h1>Pong</h1>
+            <img src="pong_logo.jpg" alt="Pong Logo" id="pongImage">
+            <h3 class="info">A simple pong game also made using python. Uses the pygame module. Click the button below to view it!</h3>
+            <button onclick="redirect(4)" class="runButtons">View</button>
+        </div>  
     </div>
 </body>
 </html>

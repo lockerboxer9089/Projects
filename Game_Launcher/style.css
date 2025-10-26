@@ -65,12 +65,12 @@
     width: 100%;
 }
 
-.hangman {
+.games {
     max-width: 430px;
     max-height: auto;
     text-align: center;
     border: 1px solid rgb(80, 80, 80);
-    background-color: rgba(40, 40, 40, 0.9);
+    background-color: rgba(40, 40, 40, 35%);
     border-radius: 10%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 35px;
@@ -78,7 +78,23 @@
     color: rgb(230, 230, 230);
 }
 
+.info {
+    width: 350px;
+    margin-left: 40px;
+}
+
+#pong {
+    margin-left: 600px;
+    margin-top: -640px;
+}
+
 #hangmanImage {
+    border-radius: 15%;
+}
+
+#pongImage {
+    width: 350px;
+    height: auto;
     border-radius: 15%;
 }
 
@@ -140,4 +156,8 @@
     0% {background-position: 0 0;}
     50% {background-position: 400% 0;}
     100% {background-position: 0 0;}
+}
+
+#games {
+    margin-left: 135px;
 }
