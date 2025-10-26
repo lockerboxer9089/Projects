@@ -8,14 +8,14 @@
     <script src="script.js"></script>
     <link rel="shortcut icon" href="code.png" type="image/png">
 </head>
-<body style="background-color: whitesmoke;">
+<body style="background-color: black;">
     <div class="title">
         <h1>Projects</h1>
     </div>
     <div class="top">
-        <button class="topbuttons" onclick="redirectHome()">Home</button>
-        <button class="topbuttons" onclick="redirectHome()">Log Out</button>
-        <button class="topbuttons" onclick="redirectHome()">Settings</button>
+        <button class="topbuttons" onclick="redirect(1)">Home</button>
+        <button class="topbuttons" onclick="redirect(2)">Log Out</button>
+        <button class="topbuttons" onclick="dropdown()">Settings</button>
     </div>
     <br>
     <hr id="titlebreak">
@@ -23,6 +23,8 @@
         <h1>Hangman</h1>
         <img src="hangman_logo.jpg" alt="Hangman Image" id="hangmanImage">
         <h3>A simple hangman game made in python. It uses the pygame module. Click the button below to run it!</h3>
+        <button onclick="redirect(3)" class="runButtons">Run</button>
+        <h1></h1>
     </div>
 </body>
 </html>
