@@ -1,19 +1,59 @@
 #title {
     border: 1px solid transparent;
     border-top: 10px solid rgb(255, 203, 114);
-    max-width: 50%;
-    margin-left: 25%;
+    max-width: 40%;
+    margin-left: 30%;
     background-color: white;
     border-radius: 10px;
     padding: 10px;
 }
 
-#firstname {
+.blocks {
     border: 1px solid transparent;
     background-color: white;
-    max-width: 50%;
-    margin-left: 25%;
+    max-width: 38%;
+    margin-left: 30%;
     margin-top: 1.5%;
     border-radius: 10px;
-    padding: 10px;
+    padding: 30px;
+}
+
+.info {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 15px;
+    width: 45%;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.info:focus {
+    outline-width: 0;
+    border-bottom: 2px solid rgb(255, 203, 114);
+}
+
+.radios {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.radios:hover {
+    border-color: rgb(255, 203, 114);
+}
+
+.radios:checked {
+    border-color: rgb(255, 203, 114);
+    background-color: rgb(255, 203, 114);
+    box-shadow: inset 0 0 0 4px white;
+}
+
+label {
+    cursor: pointer;
 }
