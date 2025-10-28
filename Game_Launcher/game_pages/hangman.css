@@ -1,0 +1,21 @@
+.title {
+    height: 40px;
+    width: 600px;
+    background-color: rgb(72, 72, 72);
+    margin-left: 29%;
+    margin-top: 7.5%;
+    border-radius: 5px;
+}
+
+.logo {
+    height: 35px;
+    width: 35px;
+    margin-top: 0.3%;
+}
+
+.bar {
+    border-left: 2px solid white;
+    height: 35px;
+    margin-left: 6%;
+    margin-top: -6.5%;
+}
