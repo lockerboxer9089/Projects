@@ -57,3 +57,33 @@
 label {
     cursor: pointer;
 }
+
+.checkboxes {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.checkboxes:hover {
+    border-color: rgb(255, 203, 114);
+}
+
+.checkboxes:checked {
+    border-color: rgb(255, 203, 114);
+    background-color: rgb(255, 203, 114);
+}
+
+.checkboxes:checked::after {
+    content: "✓";
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    line-height: 15px;
+}
