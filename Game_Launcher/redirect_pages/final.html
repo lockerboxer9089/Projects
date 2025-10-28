@@ -10,7 +10,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         var reviewData = JSON.parse(sessionStorage.getItem('reviewData'));
         if (reviewData) {
-            document.getElementById("name").textContent = `${reviewData.firstName} ${reviewData.lastname}`;
+            document.getElementById("name").textContent = `${reviewData.firstName} ${reviewData.lastName}`;
             document.getElementById("email").textContent = reviewData.email;
             document.getElementById("rating").textContent = reviewData.rating;
             document.getElementById("improvements").textContent = reviewData.improvements.join(', ') || 'None Selected';
