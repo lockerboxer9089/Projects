@@ -7,10 +7,26 @@
     <link rel="stylesheet" href="hangman.css">
     <script src="../script.js"></script>
 </head>
+<script>
+    fetch("../../Hangman/main.py").then(response => response.text()).then(data => {
+        document.getElementById("code").textContent = data;
+    }).catch(error => {
+        console.error("Error loading file: " + error);
+    });
+</script>
 <body style="background-color: rgb(42, 42, 42);">
-    <div class="title">
+    <h1 class="title">Hangman</h1>
+    <div class="filetitle">
         <img src="file_logo.png" alt="Logo of file" class="logo">
         <div class="bar"></div>
+        <p class="gamefile">main.py</p>
     </div>
+    <div class="code">
+        <div class="container">
+            <pre><code id="code"></code></pre>
+        </div>
+    </div>
+    <br>
+    <button type="button" class="return" onclick="returnToMain()">Return to Home</button>
 </body>
 </html>
