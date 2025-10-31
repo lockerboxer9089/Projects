@@ -54,4 +54,12 @@
     border-radius: 5px;
     cursor: pointer;
     color: rgb(65, 63, 63);
+    transition: 0.5s;
+}
+
+.return:hover {
+    padding: 20px;
+    border: 5px solid white;
+    cursor: pointer;
+    transition: 0.5s;
 }
