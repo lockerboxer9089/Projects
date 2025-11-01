@@ -1,39 +1,45 @@
 .filetitle {
     height: 45px;
     width: 1000px;
+    max-width: 90%;
     background-color: rgb(72, 72, 72);
-    margin-left: 15%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5%;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .logo {
     height: 35px;
     width: 35px;
-    margin-top: 0.3%;
+    margin-left: 10px;
 }
 
 .bar {
     border-left: 2px solid rgb(163, 161, 161);
     height: 40px;
-    margin-left: 4%;
-    margin-top: -4%;
+    margin-left: 20px;
 }
 
 .gamefile {
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    margin-left: 6%;
-    margin-top: -3%;
+    margin-left: 20px;
 }
 
 .container {
+    position: relative;
     height: auto;
     padding: 5px;
     width: 990px;
+    max-width: 90%;
     background-color: rgb(72, 72, 72);
     border-radius: 5px;
-    margin-left: 15%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5px;
     color: white;
 }
@@ -48,7 +54,9 @@
 
 .return {
     padding: 12px;
-    margin-left: 44%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     background-color: rgb(163, 161, 161);
     border: none;
     border-radius: 5px;
