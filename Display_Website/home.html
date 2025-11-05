@@ -5,10 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
-    <script src="script.js"></script>
 </head>
-<body>
+<script>
+    function closeWindow() {
+        var choice = confirm("Are you sure you want to exit the page?");
+        if (choice) {
+            window.close();
+        }
+        else {
+            alert("Reloading...");
+            location.reload();
+        }
+    }
+    function logOut() {
+        var choice = confirm("Are you sure you want to log out?");
+        if (choice) {
+            location.replace("redirects/login.html");
+        }
+    }
+</script>
+<body style="background: url('sunset-time-tropical-beach-sea-with-coconut-palm-tree_74190-1075.avif'); background-repeat: no-repeat; background-size: cover; color: white;">
     <div class="title">
+        <h1>HOME</h1>
+        <button type="button" class="option" id="exit" onclick="closeWindow()">Exit</button>
+        <button type="button" class="option" id="logout" onclick="logOut()">Log Out</button>
+    </div><br><br>
+    <div class="github">
+        <br><h1 style="text-align: center;">Github</h1>
+        <img src="coding-background-9izlympnd0ovmpli.jpg" alt="Background" id="codingimage">
+        <p style="font-family: consolas; text-align: center;">Click below to view my Github! This has all of my coding projects and files</p>
+        <button type="button" class="choicebuttons" id="choice1" onclick='location.replace("https://github.com/lockerboxer9089")'>Github</button><br><br><br>
+    </div><br><br>
+    <div class="choices">
+        <br>
+        <h1 style="text-align: center;">About Me!</h1>
     </div>
 </body>
 </html>
