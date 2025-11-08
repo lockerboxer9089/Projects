@@ -9,7 +9,7 @@ Improvements:
 import os,sys
 from time import sleep
 
-def add(x,yß):
+def add(x,y):
     return x+y
 
 def subtract(x,y):
@@ -40,7 +40,7 @@ def typewrite(string):
         
 os.system('clear')
 while True:
-    typewrite("Enter your problem\nDon't leave any spaces!! Enter STOP if you want to end the program...\n")
+    print("Enter your problem\nDon't leave any spaces!! Enter STOP if you want to end the program...\n")
     problem = str(input("\n: ")).lower()
     if (problem == 'stop'):
         typewrite("\nEnding Program...")
