@@ -1,3 +1,6 @@
+import os,sys
+from time import sleep
+
 def add(x,y):
     return x+y
 
@@ -8,6 +11,8 @@ def multiply(x,y):
     return x*y
 
 def divide(x,y):
+    if y == 0:
+        return "undefined"
     return x/y
 
 def find_operator(operation):
@@ -16,11 +21,40 @@ def find_operator(operation):
     for operator in operators:
         if operator in operation:
             return operator
+        
+    return None
 
-def find_operator_location(operator, operation):
-    return operation.index(operator)
+def typewrite(str):
+    for char in str:
+        sleep(0.035)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        
+os.system('clear')
+while True:
+    typewrite("Enter your problem\nDon't leave any spaces!! Enter STOP if you want to end the program...\n")
+    problem = str(input("\n: ")).lower()
+    if (problem == 'stop'):
+        typewrite("\nEnding Program...")
+        break
+    operator = find_operator(problem)
+    if operator:
+        problem_list = list(problem)
+        operator_location = problem_list.index(operator)
+        x = float(''.join(problem_list[:operator_location]))
+        y = float(''.join(problem_list[operator_location+1:]))
 
-problem = str(input("Enter your problem\n"))
-operator = find_operator(problem)
-print(operator)
-print(find_operator_location(operator, problem))
+        if operator == '*':
+            print('\n', problem, ' = ', multiply(x,y), '\n')
+        elif operator == '/':
+            print('\n', problem, ' = ', divide(x,y), '\n')
+        elif operator == '+':
+            print('\n', problem, ' = ', add(x,y), '\n')
+        elif operator == '-':
+            print('\n', problem, ' = ', subtract(x,y), '\n')
+    else:
+        typewrite("\nInvalid Input...")
+        print("")
+
+sleep(1)
+os.system('clear')
