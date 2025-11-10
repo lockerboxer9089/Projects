@@ -1,11 +1,3 @@
-"""
-Improvements:
-1. Error like this: '5+' will proceed without error
-2. - at the start example: -5+3 will see - as the operator
-3. For future - 5+2+3+4, make this work
-4. Use the typewriter less
-"""
-
 import os,sys
 from time import sleep
 
